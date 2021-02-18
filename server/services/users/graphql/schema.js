@@ -12,7 +12,7 @@ module.exports = gql`
   }
 
   input createUsers {
-      firstname: String!
+    firstname: String!
   }
 
   extend type Mutation {

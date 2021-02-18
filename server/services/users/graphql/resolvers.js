@@ -2,16 +2,16 @@ const User = require('../models/usersModel');
 
 module.exports = {
     Query: {
-      users: () => User.find({}),
+      users: async () => await User.find({}),
     },
 
     Mutation: {
-        createUser: (args) => {
+        createUser: async (parent, args) => {
+
             let user = new User({
                 firstname : args.input.firstname
             })
             const userSave = user.save();
-            console.log(userSave)
             return userSave;
         },
     }
