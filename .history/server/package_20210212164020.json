@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "concurrently -k npm:serve:*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:users": "nodemon users.js",
+    "server:graphql": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.21.0",
+    "@apollo/gateway": "^0.23.0",
+    "apollo-server": "^2.20.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7"
+  }
+}
